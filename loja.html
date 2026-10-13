@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore o catálogo de jogos e confira seu carrinho na Pixel Arena.">
+  <title>Loja e carrinho | Pixel Arena</title>
+</head>
+<body>
+  <header>
+    <p><a href="index.html" aria-label="Pixel Arena, página inicial">🎮 <strong>PIXEL ARENA</strong></a></p>
+    <p>O seu próximo jogo começa aqui.</p>
+    <nav aria-label="Navegação principal">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="loja.html" aria-current="page">Loja</a></li>
+        <li><a href="index.html#sobre">Sobre a loja</a></li>
+        <li><a href="index.html#contato">Contato</a></li>
+        <li><a href="cadastro.html">Criar conta</a></li>
+        <li><a href="login.html">Entrar</a></li>
+        <li><a href="#carrinho">Carrinho (3)</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>Loja de jogos</h1>
+    <p>Encontre sua próxima aventura entre nossos jogos para PC e consoles.</p>
+
+    <section aria-labelledby="titulo-busca">
+      <h2 id="titulo-busca">Encontre um jogo</h2>
+      <form id="form-busca-jogos" action="loja.html" method="get">
+        <p><label for="busca">Buscar por nome</label><br><input id="busca" name="busca" type="search" placeholder="Ex.: Reinos de Valória"></p>
+        <p><label for="categoria">Categoria</label><br>
+          <select id="categoria" name="categoria">
+            <option value="">Todas as categorias</option><option>Ação e aventura</option><option>Corrida</option><option>Esportes</option><option>Estratégia</option><option>Indie</option><option>Luta</option><option>Plataforma</option><option>Terror</option>
+          </select>
+        </p>
+        <p><label for="preco">Faixa de preço</label><br>
+          <select id="preco" name="preco">
+            <option value="">Qualquer preço</option><option>Até R$ 100</option><option>R$ 100 a R$ 200</option><option>R$ 200 a R$ 300</option>
+          </select>
+        </p>
+        <p><label for="ordem">Ordenar por</label><br>
+          <select id="ordem" name="ordem"><option>Recomendados</option><option>Menor preço</option><option>Maior preço</option><option>Nome</option></select>
+        </p>
+        <button type="submit">Aplicar filtros</button>
+      </form>
+    </section>
+
+    <section aria-labelledby="titulo-catalogo">
+      <h2 id="titulo-catalogo">Catálogo</h2>
+      <div>
+        <article><figure><img src="https://images.unsplash.com/photo-1605899435973-ca2d1a8861cf?auto=format&amp;fit=crop&amp;w=640&amp;q=80" alt="Controle de videogame em cenário gamer" width="640" height="420"><figcaption>Ação e aventura</figcaption></figure><h3>Reinos de Valória</h3><p>Explore um reino fantástico e enfrente criaturas lendárias.</p><p><strong>R$ 249,90</strong></p><button type="button">Adicionar ao carrinho</button></article>
+        <article><figure><img src="https://images.unsplash.com/photo-1614294149010-950b698f72c0?auto=format&amp;fit=crop&amp;w=640&amp;q=80" alt="Setup de jogos com computador e iluminação colorida" width="640" height="420"><figcaption>Corrida</figcaption></figure><h3>Velocidade Extrema 9</h3><p>Dispute corridas intensas em pistas do mundo todo.</p><p><strong>R$ 199,90</strong></p><button type="button">Adicionar ao carrinho</button></article>
+        <article><figure><img src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?auto=format&amp;fit=crop&amp;w=640&amp;q=80" alt="Mesa com jogos e controles" width="640" height="420"><figcaption>Esportes</figcaption></figure><h3>Campeões do Campo 25</h3><p>Monte seu time e viva uma temporada completa.</p><p><strong>R$ 279,90</strong></p><button type="button">Adicionar ao carrinho</button></article>
+        <article><figure><img src="https://images.unsplash.com/photo-1547394765-185e1e68f34e?auto=format&amp;fit=crop&amp;w=640&amp;q=80" alt="Controle sem fio sobre uma mesa" width="640" height="420"><figcaption>Estratégia</figcaption></figure><h3>Império das Estrelas</h3><p>Construa uma civilização espacial e conquiste mundos.</p><p><strong>R$ 169,90</strong></p><button type="button">Adicionar ao carrinho</button></article>
+        <article><figure><img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&amp;fit=crop&amp;w=640&amp;q=80" alt="Pessoa jogando videogame" width="640" height="420"><figcaption>Aventura</figcaption></figure><h3>Ilha dos Mistérios</h3><p>Desvende pistas e segredos em uma ilha misteriosa.</p><p><strong>R$ 139,90</strong></p><button type="button">Adicionar ao carrinho</button></article>
+        <article><figure><img src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&amp;fit=crop&amp;w=640&amp;q=80" alt="Televisão exibindo um jogo" width="640" height="420"><figcaption>Ficção científica</figcaption></figure><h3>Órbita Perdida</h3><p>Sobreviva no espaço e descubra o destino da tripulação.</p><p><strong>R$ 219,90</strong></p><button type="button">Adicionar ao carrinho</button></article>
+        <article><figure><img src="https://images.unsplash.com/photo-1603481546238-487240415921?auto=format&amp;fit=crop&amp;w=640&amp;q=80" alt="Console e controles prontos para jogar" width="640" height="420"><figcaption>Plataforma</figcaption></figure><h3>Salto Pixelado</h3><p>Uma aventura colorida com fases e desafios criativos.</p><p><strong>R$ 99,90</strong></p><button type="button">Adicionar ao carrinho</button></article>
+        <article><figure><img src="https://images.unsplash.com/photo-1600861194942-f883de0dfe96?auto=format&amp;fit=crop&amp;w=640&amp;q=80" alt="Jogador com controle durante uma partida" width="640" height="420"><figcaption>Terror</figcaption></figure><h3>Silêncio na Estação</h3><p>Investigue uma estação abandonada e tente escapar.</p><p><strong>R$ 189,90</strong></p><button type="button">Adicionar ao carrinho</button></article>
+        <article><figure><img src="https://images.unsplash.com/photo-1560253023-3ec5d502959f?auto=format&amp;fit=crop&amp;w=640&amp;q=80" alt="Pessoa jogando em um console portátil" width="640" height="420"><figcaption>Indie</figcaption></figure><h3>Pequeno Grande Mundo</h3><p>Ajude personagens encantadores em uma jornada artesanal.</p><p><strong>R$ 79,90</strong></p><button type="button">Adicionar ao carrinho</button></article>
+        <article><figure><img src="https://images.unsplash.com/photo-1592840496694-26d035b52b48?auto=format&amp;fit=crop&amp;w=640&amp;q=80" alt="Controle de videogame em destaque" width="640" height="420"><figcaption>Luta</figcaption></figure><h3>Duelo dos Titãs</h3><p>Escolha seu lutador e enfrente rivais em batalhas.</p><p><strong>R$ 159,90</strong></p><button type="button">Adicionar ao carrinho</button></article>
+      </div>
+    </section>
+
+    <section id="carrinho" aria-labelledby="titulo-carrinho">
+      <h2 id="titulo-carrinho">Seu carrinho</h2>
+      <table>
+        <caption>Itens adicionados ao carrinho — exemplo</caption>
+        <thead><tr><th scope="col">Produto</th><th scope="col">Quantidade</th><th scope="col">Preço unitário</th><th scope="col">Subtotal</th><th scope="col">Ação</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Reinos de Valória</th><td><label for="qtd-valoria">Quantidade</label> <input id="qtd-valoria" name="qtd-valoria" type="number" min="1" value="1"></td><td>R$ 249,90</td><td>R$ 249,90</td><td><button type="button">Remover</button></td></tr>
+          <tr><th scope="row">Salto Pixelado</th><td><label for="qtd-salto">Quantidade</label> <input id="qtd-salto" name="qtd-salto" type="number" min="1" value="1"></td><td>R$ 99,90</td><td>R$ 99,90</td><td><button type="button">Remover</button></td></tr>
+          <tr><th scope="row">Duelo dos Titãs</th><td><label for="qtd-duelo">Quantidade</label> <input id="qtd-duelo" name="qtd-duelo" type="number" min="1" value="1"></td><td>R$ 159,90</td><td>R$ 159,90</td><td><button type="button">Remover</button></td></tr>
+        </tbody>
+        <tfoot><tr><th scope="row" colspan="3">Total</th><td colspan="2"><strong>R$ 509,70</strong></td></tr></tfoot>
+      </table>
+      <p><button type="button">Finalizar compra</button></p>
+      <aside hidden>
+        <h3>Compra finalizada!</h3>
+        <p>Seu pedido de exemplo <strong>CP001</strong> foi recebido. Obrigado por comprar na Pixel Arena.</p>
+      </aside>
+      <p><small>Para visualizar a confirmação de exemplo, remova o atributo <code>hidden</code> do bloco acima.</small></p>
+    </section>
+  </main>
+  <footer>
+    <p>🎮 Pixel Arena — jogos para todas as suas fases.</p>
+    <p><a href="index.html#contato">Contato</a> · <a href="perfil.html">Meu perfil</a></p>
+    <p><small>Loja fictícia. © 2026 Pixel Arena.</small></p>
+  </footer>
+</body>
+</html>

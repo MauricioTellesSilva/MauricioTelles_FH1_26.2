@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Área administrativa da Pixel Arena: relatórios de clientes e compras.">
+  <title>Relatórios | Administração Pixel Arena</title>
+</head>
+<body>
+  <header>
+    <p><strong>PIXEL ARENA</strong> — Área administrativa</p>
+    <p>Relatórios de clientes e compras</p>
+    <nav aria-label="Navegação administrativa">
+      <ul>
+        <li><a href="index.html">Voltar à loja</a></li>
+        <li><a href="#clientes">Clientes</a></li>
+        <li><a href="#compras">Compras</a></li>
+        <li><a href="login.html">Sair</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>Relatórios administrativos</h1>
+    <p>Dados de demonstração para fins acadêmicos.</p>
+    <p>Emitido em 13/10/2026 às 10h00 — horário de Brasília.</p>
+
+    <section id="clientes" aria-labelledby="titulo-clientes">
+      <h2 id="titulo-clientes">Relatório de clientes</h2>
+      <form id="busca-clientes" action="relatorios.html#clientes" method="get">
+        <fieldset>
+          <legend>Buscar cliente</legend>
+          <p><label for="criterio-cliente">Critério</label><br><select id="criterio-cliente" name="criterio"><option value="nome">Nome</option><option value="id">ID</option><option value="email">E-mail</option><option value="cpf">CPF</option></select></p>
+          <p><label for="termo-cliente">Termo de busca</label><br><input id="termo-cliente" name="termo" type="search" placeholder="Digite o que deseja encontrar"></p>
+          <button type="submit">Buscar cliente</button>
+        </fieldset>
+      </form>
+      <table>
+        <caption>Clientes cadastrados — dados de exemplo</caption>
+        <thead><tr><th scope="col">ID</th><th scope="col">Nome</th><th scope="col">E-mail</th><th scope="col">CPF</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">C001</th><td>Alex Silva</td><td>alex.silva@exemplo.com</td><td>123.456.789-00</td></tr>
+          <tr><th scope="row">C002</th><td>Beatriz Costa</td><td>beatriz.costa@exemplo.com</td><td>234.567.890-11</td></tr>
+          <tr><th scope="row">C003</th><td>Caio Oliveira</td><td>caio.oliveira@exemplo.com</td><td>345.678.901-22</td></tr>
+          <tr><th scope="row">C004</th><td>Daniela Souza</td><td>daniela.souza@exemplo.com</td><td>456.789.012-33</td></tr>
+          <tr><th scope="row">C005</th><td>Eduardo Lima</td><td>eduardo.lima@exemplo.com</td><td>567.890.123-44</td></tr>
+        </tbody>
+        <tfoot><tr><th scope="row" colspan="3">Total de clientes de exemplo</th><td>5</td></tr></tfoot>
+      </table>
+    </section>
+
+    <section id="compras" aria-labelledby="titulo-compras">
+      <h2 id="titulo-compras">Relatório de compras</h2>
+      <form id="busca-compras" action="relatorios.html#compras" method="get">
+        <fieldset>
+          <legend>Buscar compra</legend>
+          <p><label for="criterio-compra">Critério</label><br><select id="criterio-compra" name="criterio"><option value="id">ID da compra</option><option value="cliente">Cliente</option><option value="data">Data</option><option value="valor">Valor</option><option value="produto">Produto</option></select></p>
+          <p><label for="termo-compra">Termo de busca</label><br><input id="termo-compra" name="termo" type="search" placeholder="Digite o que deseja encontrar"></p>
+          <button type="submit">Buscar compra</button>
+        </fieldset>
+      </form>
+      <table>
+        <caption>Compras realizadas — dados de exemplo</caption>
+        <thead><tr><th scope="col">ID da compra</th><th scope="col">Cliente</th><th scope="col">Produtos</th><th scope="col">Quantidade</th><th scope="col">Valor total</th><th scope="col">Data</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">CP001</th><td>Alex Silva (C001)</td><td>Reinos de Valória</td><td>1</td><td>R$ 249,90</td><td>10/10/2026</td></tr>
+          <tr><th scope="row">CP002</th><td>Beatriz Costa (C002)</td><td>Salto Pixelado; Ilha dos Mistérios</td><td>2</td><td>R$ 239,80</td><td>09/10/2026</td></tr>
+          <tr><th scope="row">CP003</th><td>Caio Oliveira (C003)</td><td>Campeões do Campo 25</td><td>1</td><td>R$ 279,90</td><td>07/10/2026</td></tr>
+          <tr><th scope="row">CP004</th><td>Daniela Souza (C004)</td><td>Órbita Perdida; Duelo dos Titãs</td><td>2</td><td>R$ 379,80</td><td>05/10/2026</td></tr>
+          <tr><th scope="row">CP005</th><td>Eduardo Lima (C005)</td><td>Pequeno Grande Mundo</td><td>1</td><td>R$ 79,90</td><td>02/10/2026</td></tr>
+        </tbody>
+        <tfoot><tr><th scope="row" colspan="4">Total das compras de exemplo</th><td>R$ 1.229,30</td><td>5 compras</td></tr></tfoot>
+      </table>
+    </section>
+  </main>
+  <footer>
+    <p>Pixel Arena — Área administrativa</p>
+    <p>Relatório de demonstração · Emitido em 13/10/2026 às 22h29</p>
+    <p><a href="index.html">Voltar ao site da loja</a></p>
+  </footer>
+</body>
+</html>
