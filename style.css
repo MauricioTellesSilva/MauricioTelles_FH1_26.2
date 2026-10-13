@@ -1,106 +1,113 @@
-/* Pixel Arena — estilos */
-
+/* Pixel Arena: visual responsivo */
 :root {
   color-scheme: dark;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #10131d;
-  color: #f4f5f8;
+  --cor-fundo: #10131d;
+  --cor-superficie: #191e2b;
+  --cor-superficie-clara: #222a3a;
+  --cor-texto: #f4f5f8;
+  --cor-suave: #b8c0d0;
+  --cor-destaque: #71e6c1;
+  --cor-destaque-hover: #a1f4d9;
+  --cor-borda: #394052;
+  --largura-conteudo: 1200px;
+  --raio: 0.75rem;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  background: var(--cor-fundo);
+  color: var(--cor-texto);
 }
 
-body {
-  margin: 0;
-  line-height: 1.6;
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 0; line-height: 1.6; }
+header, main, footer { padding: 1.25rem; }
+header, footer { background: var(--cor-superficie); }
+header > p:first-child { font-size: 1.35rem; margin-bottom: 0.2rem; }
+header > p:nth-child(2), footer small { color: var(--cor-suave); }
+main { width: min(100%, var(--largura-conteudo)); margin-inline: auto; }
+footer { text-align: center; }
+nav ul { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem; padding: 0; list-style: none; }
+nav a, a { color: var(--cor-destaque); }
+nav a { display: inline-block; padding: 0.45rem 0.7rem; text-decoration: none; border-radius: 0.4rem; transition: background-color 180ms ease, color 180ms ease; }
+nav a:hover, nav a[aria-current="page"] { color: var(--cor-fundo); background: var(--cor-destaque); }
+a:hover { color: var(--cor-destaque-hover); }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible, summary:focus-visible { outline: 3px solid #ffd166; outline-offset: 3px; }
+button, input, select, textarea { max-width: 100%; font: inherit; padding: 0.65rem 0.8rem; border: 1px solid var(--cor-borda); border-radius: 0.4rem; }
+input, select, textarea { color: var(--cor-texto); background: var(--cor-superficie); }
+button { color: var(--cor-fundo); background: var(--cor-destaque); border: 0; cursor: pointer; font-weight: 700; transition: none; }
+button:hover { background: var(--cor-destaque); transform: none; }
+button:active { transform: none; }
+img { display: block; max-width: 100%; height: auto; border-radius: 0.5rem; }
+figure { margin: 1rem 0; }
+figcaption { color: var(--cor-suave); font-size: 0.9rem; }
+section { margin-block: 2.5rem; }
+fieldset { border: 1px solid var(--cor-borda); border-radius: var(--raio); padding: 1.25rem; }
+legend { color: var(--cor-destaque); font-weight: 700; padding-inline: 0.4rem; }
+
+/* Grades de cartões centralizadas */
+main > section > div { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; width: 100%; margin-inline: auto; }
+main > section > div > article { flex: 0 1 280px; min-width: 0; padding: 1rem; background: var(--cor-superficie); border: 1px solid var(--cor-borda); border-radius: var(--raio); transition: none; }
+main > section > div > article:hover { transform: none; border-color: var(--cor-borda); }
+main > section > div > article img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+
+/* Tabelas permitem rolagem própria quando o conteúdo for largo */
+table { width: 100%; border-collapse: collapse; }
+#carrinho table { margin-inline: auto; }
+th, td { padding: 0.75rem; border-bottom: 1px solid var(--cor-borda); text-align: left; }
+caption { padding: 0.75rem; color: var(--cor-suave); text-align: left; }
+
+/* Desktop: acima de 1024px */
+@media (min-width: 1025px) {
+  header { padding-inline: max(1.25rem, calc((100% - var(--largura-conteudo)) / 2)); }
+  nav ul { gap: 1rem; }
+  main > section > div > article { flex-basis: 280px; }
 }
 
-header,
-main,
-footer {
-  padding: 1.25rem;
+/* Tablet: 768px a 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+  header, main, footer { padding: 1rem; }
+  main > section > div { gap: 1rem; }
+  main > section > div > article { flex-basis: calc(33.333% - 1rem); }
+  nav ul { gap: 0.25rem; }
 }
 
-header,
-footer {
-  background-color: #191e2b;
+/* Smartphone compacto: até 320px; sem estouro horizontal */
+@media (max-width: 320px) {
+  html, body { width: 100%; max-width: 100%; overflow-x: hidden; }
+  header, main, footer { padding: 0.75rem; }
+  header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.25rem; }
+  header > p { max-width: 100%; overflow-wrap: anywhere; }
+  header > p:first-child { font-size: 1.1rem; }
+  header > p:nth-child(2) { flex-basis: 100%; font-size: 0.85rem; margin: 0; }
+  nav { flex-basis: 100%; min-width: 0; }
+  nav > details > summary { display: inline-block; padding: 0.45rem 0.7rem; color: var(--cor-fundo); background: var(--cor-destaque); border-radius: 0.4rem; cursor: pointer; list-style: none; }
+  nav > details > summary::-webkit-details-marker { display: none; }
+  nav > details > summary::before { content: "☰  "; }
+  nav > details[open] > summary::before { content: "✕  "; }
+  nav ul { display: none; flex-direction: column; align-items: stretch; gap: 0.25rem; margin: 0.5rem 0 0; padding: 0.5rem; background: var(--cor-superficie-clara); border-radius: 0.5rem; }
+  nav details[open] ul { display: flex; }
+  nav li, nav a { min-width: 0; width: 100%; }
+  main > section > div { width: 100%; gap: 0.75rem; }
+  main > section > div > article { flex-basis: 100%; width: 100%; padding: 0.75rem; }
+  table { display: block; max-width: 100%; overflow-x: auto; }
+  th, td { padding: 0.45rem; }
+  input, select, textarea { width: 100%; }
+  button { max-width: 100%; overflow-wrap: anywhere; }
 }
 
-nav ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  padding: 0;
-  list-style: none;
+/* Telas pequenas adicionais entre 321px e 767px */
+@media (min-width: 321px) and (max-width: 767px) {
+  header, main, footer { padding: 1rem; }
+  nav ul { gap: 0.25rem; }
+  main > section > div > article { flex-basis: min(100%, 320px); }
+  table { display: block; max-width: 100%; overflow-x: auto; }
 }
 
-a {
-  color: #71e6c1;
+/* Navegação padrão expandida; em telas compactas vira menu recolhível */
+.menu-principal > details > summary { display: none; }
+.menu-principal > details > ul { display: flex; }
+@media (max-width: 320px) {
+  .menu-principal > details > summary { display: inline-block; }
+  .menu-principal > details > ul { display: none; }
+  .menu-principal > details[open] > ul { display: flex; }
 }
 
-button,
-input,
-select,
-textarea {
-  font: inherit;
-  padding: 0.55rem;
-}
-
-button {
-  cursor: pointer;
-  background-color: #71e6c1;
-  border: 0;
-  border-radius: 0.35rem;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Centraliza os grupos de cartões nas páginas da loja e inicial */
-main > section > div {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
-  width: 90%;
-  margin: 0 auto;
-}
-
-main > section > div > article {
-  width: 280px;
-  padding: 1rem;
-  background: #191e2b;
-  border-radius: 0.75rem;
-  box-sizing: border-box;
-}
-
-main > section > div > article img {
-  width: 100%;
-  object-fit: cover;
-}
-
-#carrinho table {
-  margin: 0 auto;
-  width: 100%;
-  border-collapse: collapse;
-}
-
-th,
-td {
-  padding: 0.75rem;
-  border-bottom: 1px solid #394052;
-  text-align: left;
-}
-
-@media (max-width: 600px) {
-  nav ul {
-    flex-direction: column;
-  }
-
-  main > section > div {
-    width: 100%;
-  }
-
-  main > section > div > article {
-    width: 100%;
-  }
-}
