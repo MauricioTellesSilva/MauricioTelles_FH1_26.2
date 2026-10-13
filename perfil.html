@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Consulte e atualize seus dados na Pixel Arena.">
+  <title>Meu perfil | Pixel Arena</title>
+</head>
+<body>
+  <header>
+    <p><a href="index.html" aria-label="Pixel Arena, página inicial">🎮 <strong>PIXEL ARENA</strong></a></p>
+    <p>O seu próximo jogo começa aqui.</p>
+    <nav aria-label="Navegação principal">
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="index.html#jogos">Jogos</a></li>
+        <li><a href="index.html#sobre">Sobre a loja</a></li>
+        <li><a href="index.html#contato">Contato</a></li>
+        <li><a href="perfil.html" aria-current="page">Meu perfil</a></li>
+        <li><a href="login.html">Sair</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>Meu perfil</h1>
+    <p>Confira seus dados e acompanhe seus pedidos da Pixel Arena.</p>
+
+    <section aria-labelledby="titulo-dados">
+      <h2 id="titulo-dados">Meus dados</h2>
+      <form id="form-perfil" action="perfil.html" method="get">
+        <fieldset>
+          <legend>Informações da conta</legend>
+          <p><label for="cliente-id">ID do cliente</label><br><input id="cliente-id" name="cliente-id" type="text" value="C001" readonly></p>
+          <p><label for="nome">Nome completo</label><br><input id="nome" name="nome" type="text" value="Alex Silva" autocomplete="name" minlength="3" required></p>
+          <p><label for="email">E-mail</label><br><input id="email" name="email" type="email" value="alex.silva@exemplo.com" autocomplete="email" required></p>
+          <p><label for="cpf">CPF</label><br><input id="cpf" name="cpf" type="text" inputmode="numeric" value="123.456.789-00" autocomplete="off" minlength="14" maxlength="14" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Digite o CPF no formato 000.000.000-00" required></p>
+          <p><label for="senha">Nova senha</label><br><input id="senha" name="senha" type="password" placeholder="Deixe em branco para manter a senha atual" autocomplete="new-password" minlength="8"></p>
+          <p><label for="confirmar-senha">Confirme a nova senha</label><br><input id="confirmar-senha" name="confirmar-senha" type="password" placeholder="Digite a nova senha novamente" autocomplete="new-password" minlength="8"></p>
+          <p><button type="submit">Salvar alterações</button></p>
+        </fieldset>
+      </form>
+    </section>
+
+    <section aria-labelledby="titulo-pedidos">
+      <h2 id="titulo-pedidos">Meus pedidos</h2>
+      <table>
+        <caption>Histórico de pedidos de exemplo</caption>
+        <thead>
+          <tr>
+            <th scope="col">Pedido</th>
+            <th scope="col">Data</th>
+            <th scope="col">Produto</th>
+            <th scope="col">Total</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">PA1042</th>
+            <td>10/10/2026</td>
+            <td>Reinos de Valória</td>
+            <td>R$ 249,90</td>
+            <td>Entregue</td>
+          </tr>
+          <tr>
+            <th scope="row">PA0987</th>
+            <td>28/09/2026</td>
+            <td>Salto Pixelado</td>
+            <td>R$ 99,90</td>
+            <td>Entregue</td>
+          </tr>
+          <tr>
+            <th scope="row">PA0915</th>
+            <td>14/09/2026</td>
+            <td>Duelo dos Titãs</td>
+            <td>R$ 159,90</td>
+            <td>Entregue</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <p><a href="index.html">Voltar para a loja</a></p>
+  </main>
+  <footer>
+    <p>🎮 Pixel Arena — jogos para todas as suas fases.</p>
+    <p><a href="index.html#contato">Contato</a> · <a href="login.html">Sair da conta</a></p>
+    <p><small>Loja fictícia. © 2026 Pixel Arena.</small></p>
+  </footer>
+</body>
+</html>
