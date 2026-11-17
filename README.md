@@ -1,16 +1,16 @@
 # Pixel Arena
 
-Este é um projeto de loja de jogos que fiz usando HTML, CSS e JavaScript. Até agora, implementei os itens 2.1, 2.2 e 2.3 do trabalho: cadastro e perfil, login, catálogo, filtros, carrinho, cupons e cálculo de frete.
+Este é um projeto de loja de jogos que fiz usando HTML, CSS e JavaScript.
 
 ## Como iniciar o site
 
-É preciso ter o Node.js instalado. No terminal, entre na pasta do projeto e rode:
+rode:
 
 ```bash
 npm run dev
 ```
 
-Depois, abra <http://localhost:5173> no navegador. O servidor está no arquivo `server.js` e usa recursos que já vêm com o Node.js.
+Depois, abra <http://localhost:5173>.
 
 ## Conta de administrador
 
@@ -59,7 +59,3 @@ As senhas são transformadas em hash com salt usando `crypto.subtle`. Como este 
 - `js/catalogo.js`: catálogo, filtros, detalhes e carrinho.
 - `js/ui.js`: menu, sessão e mensagens na tela.
 - `server.js`: servidor local iniciado pelo comando `npm run dev`.
-
-## Divisão do trabalho
-
-Para o trabalho em dupla, uma pessoa pode ficar com cadastro, login e perfil, e a outra com catálogo, filtros e carrinho. Os nomes dos integrantes podem ser adicionados aqui.
