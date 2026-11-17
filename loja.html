@@ -19,9 +19,7 @@
         <li><a href="loja.html" aria-current="page">Loja</a></li>
         <li><a href="index.html#sobre">Sobre a loja</a></li>
         <li><a href="index.html#contato">Contato</a></li>
-        <li><a href="cadastro.html">Criar conta</a></li>
-        <li><a href="login.html">Entrar</a></li>
-        <li><a href="#carrinho">Carrinho (3)</a></li>
+        <li><a href="#carrinho">Carrinho (0)</a></li>
       </ul>
       </details>
     </nav>
@@ -32,53 +30,44 @@
 
     <section aria-labelledby="titulo-busca">
       <h2 id="titulo-busca">Encontre um jogo</h2>
-      <form id="form-busca-jogos" action="loja.html" method="get">
+      <form id="form-busca-jogos">
         <p><label for="busca">Buscar por nome</label><br><input id="busca" name="busca" type="search" placeholder="Ex.: Satisfactory"></p>
-        <p><label for="categoria">Categoria</label><br><select id="categoria" name="categoria"><option value="">Todas as categorias</option><option>Aventura e Tycoon</option><option>Aventura e Sobrevivência</option><option>Multiplayer e FPS</option><option>Mundo aberto e Ficção científica</option><option>Estratégia e História</option><option>Multiplayer e Ficção científica</option><option>Aventura e História</option><option>Multiplayer e Ação</option><option>Simulação</option><option>Ação e Ficção científica</option></select></p>
-        <p><label for="preco">Faixa de preço</label><br><select id="preco" name="preco"><option value="">Qualquer preço</option><option>Até R$ 150</option><option>R$ 150 a R$ 200</option><option>R$ 200 a R$ 250</option><option>Acima de R$ 250</option></select></p>
-        <p><label for="ordem">Ordenar por</label><br><select id="ordem" name="ordem"><option>Recomendados</option><option>Menor preço</option><option>Maior preço</option><option>Nome</option></select></p>
-        <button type="submit">Aplicar filtros</button>
+        <p><label for="categoria">Categoria</label><br><select id="categoria" name="categoria"><option value="">Todas as categorias</option></select></p>
+        <p><label for="preco">Faixa de preço</label><br><select id="preco" name="preco"><option value="">Qualquer preço</option><option value="150">Até R$ 150</option><option value="150-200">R$ 150 a R$ 200</option><option value="200-250">R$ 200 a R$ 250</option><option value="250">Acima de R$ 250</option></select></p>
+        <p><label for="ordem">Ordenar por</label><br><select id="ordem" name="ordem"><option value="">Recomendados</option><option value="menor">Menor preço</option><option value="maior">Maior preço</option><option value="nome">Nome</option></select></p>
       </form>
     </section>
 
     <section aria-labelledby="titulo-catalogo">
       <h2 id="titulo-catalogo">Catálogo</h2>
-      <div>
-        <article><figure><img src="src/Satisfactory.jpg" alt="Capa do jogo Satisfactory" width="640" height="420"><figcaption>Aventura e Tycoon</figcaption></figure><h3>Satisfactory</h3><p>Construa fábricas em um mundo aberto, explore um planeta alienígena e crie complexas linhas de produção. Jogue sozinho ou com amigos.</p><p><strong>R$ 249,90</strong></p><button type="button">Adicionar ao carrinho</button></article>
-        <article><figure><img src="src/Raft.jpg" alt="Capa do jogo Raft" width="640" height="420"><figcaption>Aventura e Sobrevivência</figcaption></figure><h3>Raft</h3><p>Construa uma balsa e navegue pelas águas em uma jornada de sobrevivência.</p><p><strong>R$ 199,90</strong></p><button type="button">Adicionar ao carrinho</button></article>
-        <article><figure><img src="src/Battlefield1.jpg" alt="Capa do jogo Battlefield 1" width="640" height="420"><figcaption>Multiplayer e FPS</figcaption></figure><h3>Battlefield 1</h3><p>Viva experiências de batalha épicas ambientadas na Primeira Guerra Mundial.</p><p><strong>R$ 279,90</strong></p><button type="button">Adicionar ao carrinho</button></article>
-        <article><figure><img src="src/Stalker2.jpg" alt="Capa do jogo Stalker 2" width="640" height="420"><figcaption>Mundo aberto e ficção científica</figcaption></figure><h3>Stalker 2</h3><p>Explore uma região perigosa de mundo aberto e descubra seus segredos.</p><p><strong>R$ 169,90</strong></p><button type="button">Adicionar ao carrinho</button></article>
-        <article><figure><img src="src/AOE2.jpg" alt="Capa do jogo Age of Empires II" width="640" height="420"><figcaption>Estratégia e história</figcaption></figure><h3>Age of Empires II</h3><p>Construa impérios e conduza exércitos em batalhas épicas.</p><p><strong>R$ 139,90</strong></p><button type="button">Adicionar ao carrinho</button></article>
-        <article><figure><img src="src/ArcRaiders.jpg" alt="Capa do jogo Arc Raiders" width="640" height="420"><figcaption>Multiplayer e ficção científica</figcaption></figure><h3>Arc Raiders</h3><p>Explore um universo de ficção científica e lute contra inimigos por recursos.</p><p><strong>R$ 219,90</strong></p><button type="button">Adicionar ao carrinho</button></article>
-        <article><figure><img src="src/Fallout4.jpg" alt="Capa do jogo Fallout 4" width="640" height="420"><figcaption>Aventura e história</figcaption></figure><h3>Fallout 4</h3><p>Explore um mundo pós-apocalíptico após uma guerra nuclear.</p><p><strong>R$ 199,90</strong></p><button type="button">Adicionar ao carrinho</button></article>
-        <article><figure><img src="src/Titanfall2.jpg" alt="Capa do jogo Titanfall 2" width="640" height="420"><figcaption>Multiplayer e ação</figcaption></figure><h3>Titanfall 2</h3><p>Combine ação e estratégia em batalhas épicas ao lado de titãs.</p><p><strong>R$ 199,90</strong></p><button type="button">Adicionar ao carrinho</button></article>
-        <article><figure><img src="src/BeamNG.jpg" alt="Capa do jogo BeamNG.Drive" width="640" height="420"><figcaption>Simulação</figcaption></figure><h3>BeamNG.Drive</h3><p>Experimente simulação de veículos com física realista.</p><p><strong>R$ 149,90</strong></p><button type="button">Adicionar ao carrinho</button></article>
-        <article><figure><img src="src/QuantumBreak.jpg" alt="Capa do jogo Quantum Break" width="640" height="420"><figcaption>Ação e ficção científica</figcaption></figure><h3>Quantum Break</h3><p>Entre em um universo onde o tempo e as leis da física podem mudar.</p><p><strong>R$ 159,90</strong></p><button type="button">Adicionar ao carrinho</button></article>
-      </div>
+      <div id="catalogo-produtos"></div>
+      <p id="catalogo-vazio" hidden>Nenhum jogo encontrado. Ajuste os filtros e tente novamente.</p>
     </section>
 
     <section id="carrinho" aria-labelledby="titulo-carrinho">
       <h2 id="titulo-carrinho">Seu carrinho</h2>
       <table>
-        <caption>Itens adicionados ao carrinho — exemplo</caption>
+        <caption>Itens adicionados ao carrinho</caption>
         <thead><tr><th scope="col">Produto</th><th scope="col">Quantidade</th><th scope="col">Preço unitário</th><th scope="col">Subtotal</th><th scope="col">Ação</th></tr></thead>
-        <tbody>
-          <tr><th scope="row">Satisfactory</th><td><label for="qtd-satisfactory">Quantidade</label> <input id="qtd-satisfactory" name="qtd-satisfactory" type="number" min="1" value="1"></td><td>R$ 249,90</td><td>R$ 249,90</td><td><button type="button">Remover</button></td></tr>
-          <tr><th scope="row">Raft</th><td><label for="qtd-raft">Quantidade</label> <input id="qtd-raft" name="qtd-raft" type="number" min="1" value="1"></td><td>R$ 199,90</td><td>R$ 199,90</td><td><button type="button">Remover</button></td></tr>
-          <tr><th scope="row">Age of Empires II</th><td><label for="qtd-aoe2">Quantidade</label> <input id="qtd-aoe2" name="qtd-aoe2" type="number" min="1" value="1"></td><td>R$ 139,90</td><td>R$ 139,90</td><td><button type="button">Remover</button></td></tr>
-        </tbody>
-        <tfoot><tr><th scope="row" colspan="3">Total</th><td colspan="2"><strong>R$ 589,70</strong></td></tr></tfoot>
+        <tbody id="linhas-carrinho"></tbody>
+        <tfoot><tr><th scope="row" colspan="3">Total</th><td colspan="2"><strong id="total-carrinho">R$ 0,00</strong></td></tr></tfoot>
       </table>
-      <p><button type="button">Finalizar compra</button></p>
-      <aside hidden><h3>Compra finalizada!</h3><p>Seu pedido de exemplo <strong>CP001</strong> foi recebido. Obrigado por comprar na Pixel Arena.</p></aside>
-      <p><small>Para visualizar a confirmação de exemplo, remova o atributo <code>hidden</code> do bloco acima.</small></p>
+      <p id="carrinho-vazio">Seu carrinho está vazio.</p>
+      <fieldset id="entrega-cupom"><legend>Descontos e entrega</legend>
+        <p><label for="cupom">Cupom</label><br><input id="cupom" autocomplete="off" placeholder="Ex.: PIXEL10"><button id="aplicar-cupom" type="button">Aplicar cupom</button><small id="mensagem-cupom" aria-live="polite"></small></p>
+        <p><label for="cep">CEP de entrega</label><br><input id="cep" inputmode="numeric" maxlength="9" placeholder="00000-000"><small id="mensagem-frete" aria-live="polite"></small></p>
+        <p>Desconto: <strong id="desconto-carrinho">R$ 0,00</strong> · Frete: <strong id="frete-carrinho">R$ 0,00</strong></p>
+      </fieldset>
     </section>
+    <dialog id="dialog-produto" aria-label="Detalhes do produto"></dialog>
   </main>
   <footer>
     <p>🎮 Pixel Arena — jogos para todas as suas fases.</p>
     <p><a href="index.html#contato">Contato</a> · <a href="perfil.html">Meu perfil</a></p>
     <p><small>Loja fictícia. © 2026 Pixel Arena.</small></p>
   </footer>
+  <script type="module" src="js/catalogo.js"></script>
+  <script type="module" src="js/ui.js"></script>
 </body>
 </html>
 

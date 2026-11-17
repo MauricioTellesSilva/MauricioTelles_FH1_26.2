@@ -19,6 +19,7 @@
         <li><a href="#jogos">Jogos</a></li>
         <li><a href="#sobre">Sobre a loja</a></li>
         <li><a href="#contato">Contato</a></li>
+        <li><a href="loja.html#carrinho">Carrinho (0)</a></li>
         <li><a href="cadastro.html">Criar conta</a></li>
         <li><a href="login.html">Entrar</a></li>
       </ul>
@@ -35,48 +36,7 @@
     <section id="jogos" aria-labelledby="titulo-jogos">
       <h2 id="titulo-jogos">Jogos em destaque</h2>
       <p>Uma seleção para começar sua próxima jornada.</p>
-      <div>
-        <article>
-          <figure><img src="src/Satisfactory.jpg" alt="Satisfactory" width="640" height="420"><figcaption>Aventura e Tycoon</figcaption></figure>
-          <h3>Satisfactory</h3><p>Satisfactory é um jogo de construção de fábricas em primeira pessoa num mundo aberto, com traços de exploração e combate. Jogue sozinho ou com amigos, explore um planeta alienígena, crie fábricas de vários andares e entre no paraíso das esteiras de transporte!.</p><p><strong>R$ 249,90</strong></p><button type="button">Adicionar ao carrinho</button>
-        </article>
-        <article>
-          <figure><img src="src/Raft.jpg" alt="Raft" width="640" height="420"><figcaption>Aventura e Sobrevivência</figcaption></figure>
-          <h3>Raft</h3><p>Construa uma balsa e navegue pelas águas em uma jornada de sobrevivência.</p><p><strong>R$ 199,90</strong></p><button type="button">Adicionar ao carrinho</button>
-        </article>
-        <article>
-          <figure><img src="src/Battlefield1.jpg" alt="Mesa com jogos e controles para uma partida entre amigos" width="640" height="420"><figcaption>Multiplayer e FPS</figcaption></figure>
-          <h3>Battlefield 1</h3><p>Experimente a primeira guerra mundial em experiências de batalhas épicas.</p><p><strong>R$ 279,90</strong></p><button type="button">Adicionar ao carrinho</button>
-        </article>
-        <article>
-          <figure><img src="src/Stalker2.jpg" alt="Stalker 2" width="640" height="420"><figcaption>Mundo aberto e Ficção científica</figcaption></figure>
-          <h3>Stalker 2</h3><p>Explore o mundo de Stalker 2 e descubra os segredos de sua região.</p><p><strong>R$ 169,90</strong></p><button type="button">Adicionar ao carrinho</button>
-        </article>
-        <article>
-          <figure><img src="src/AOE2.jpg" alt="Age of Empires II" width="640" height="420"><figcaption>Estratégia e História</figcaption></figure>
-          <h3>Age of Empires II</h3><p>Construa impérios e conduza exércitos em batalhas épicas.</p><p><strong>R$ 139,90</strong></p><button type="button">Adicionar ao carrinho</button>
-        </article>
-        <article>
-          <figure><img src="src/ArcRaiders.jpg" alt="Arc Raiders" width="640" height="420"><figcaption>Multiplayer e Ficção científica</figcaption></figure>
-          <h3>Arc Raiders</h3><p>Explore um universo de ficção científica e lute contra inimigos em batalhas por recursos.</p><p><strong>R$ 219,90</strong></p><button type="button">Adicionar ao carrinho</button>
-        </article>
-        <article>
-          <figure><img src="src/Fallout4.jpg" alt="Fallout 4" width="640" height="420"><figcaption>Aventura e História</figcaption></figure>
-          <h3>Fallout 4</h3><p>Explore o mundo pós-apocalíptico apos uma guerra nuclear.</p><p><strong>R$ 199,90</strong></p><button type="button">Adicionar ao carrinho</button>
-        </article>
-        <article>
-          <figure><img src="src/Titanfall2.jpg" alt="Titanfall 2" width="640" height="420"><figcaption>Multiplayer e Ação</figcaption></figure>
-          <h3>Titanfall 2</h3><p>Combine ação e estratégia em batalhas épicas com seus titãs.</p><p><strong>R$ 199,90</strong></p><button type="button">Adicionar ao carrinho</button>
-        </article>
-        <article>
-          <figure><img src="src/BeamNG.jpg" alt="BeamNG.Drive" width="640" height="420"><figcaption>Simulação</figcaption></figure>
-          <h3>BeamNG.Drive</h3><p>Experimente a física realista em veículos.</p><p><strong>R$ 149,90</strong></p><button type="button">Adicionar ao carrinho</button>
-        </article>
-        <article>
-          <figure><img src="src/QuantumBreak.jpg" alt="Quantum Break" width="640" height="420"><figcaption>Luta</figcaption></figure>
-          <h3>Quantum Break</h3><p>Experimente um universo onde a física é desafiada e o tempo tem um papel crucial.</p><p><strong>R$ 159,90</strong></p><button type="button">Adicionar ao carrinho</button>
-        </article>
-      </div>
+      <div id="catalogo-produtos" data-destaques="true"></div>
     </section>
 
     <section id="contato" aria-labelledby="titulo-contato">
@@ -97,12 +57,15 @@
         </fieldset>
       </form>
     </section>
+    <dialog id="dialog-produto" aria-label="Detalhes do produto"></dialog>
   </main>
   <footer>
     <p>🎮 Pixel Arena — jogos para todas as suas fases.</p>
     <p><a href="cadastro.html">Criar conta</a> · <a href="login.html">Entrar</a> · <a href="#contato">Contato</a></p>
     <p><small>Loja fictícia. © 2026 Pixel Arena.</small></p>
   </footer>
+  <script type="module" src="js/catalogo.js"></script>
+  <script type="module" src="js/ui.js"></script>
 </body>
 </html>
 
