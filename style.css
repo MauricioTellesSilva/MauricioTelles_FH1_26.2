@@ -42,6 +42,16 @@ figcaption { color: var(--cor-suave); font-size: 0.9rem; }
 section { margin-block: 2.5rem; }
 fieldset { border: 1px solid var(--cor-borda); border-radius: var(--raio); padding: 1.25rem; }
 legend { color: var(--cor-destaque); font-weight: 700; padding-inline: 0.4rem; }
+.erro-campo { display: block; color: #ff9c9c; min-height: 1.2em; }
+[aria-invalid="true"] { border-color: #ff7777; }
+#forca-senha { display: block; color: var(--cor-suave); }
+.notificacoes { position: fixed; z-index: 10; inset: 1rem 1rem auto auto; display: grid; gap: .5rem; max-width: min(24rem, calc(100vw - 2rem)); }
+.toast { margin: 0; padding: .8rem 1rem; border: 1px solid var(--cor-borda); border-radius: .6rem; background: var(--cor-superficie-clara); box-shadow: 0 4px 18px #0006; }
+.toast.erro { border-color: #ff7777; }
+dialog { width: min(92vw, 38rem); max-height: 90vh; overflow: auto; color: var(--cor-texto); background: var(--cor-superficie); border: 1px solid var(--cor-borda); border-radius: var(--raio); }
+dialog::backdrop { background: #000a; }
+dialog img { max-height: 18rem; object-fit: contain; margin-block: 1rem; }
+button:disabled { opacity: .55; cursor: not-allowed; }
 
 /* Grades de cartões centralizadas */
 main > section > div { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; width: 100%; margin-inline: auto; }
