@@ -19,7 +19,6 @@
         <li><a href="index.html#jogos">Jogos</a></li>
         <li><a href="index.html#sobre">Sobre a loja</a></li>
         <li><a href="index.html#contato">Contato</a></li>
-        <li><a href="cadastro.html">Criar conta</a></li>
         <li><a href="login.html" aria-current="page">Entrar</a></li>
       </ul>
       </details>
@@ -28,7 +27,8 @@
   <main>
     <h1>Boas-vindas de volta</h1>
     <p>Entre para continuar sua jornada na Pixel Arena.</p>
-    <form id="form-login" action="index.html" method="get">
+    <p id="mensagem-login" role="status" aria-live="polite"></p><p id="bloqueio-login" role="status" aria-live="polite"></p>
+    <form id="form-login" novalidate>
       <fieldset>
         <legend>Dados de acesso</legend>
         <p><label for="email">E-mail</label><br><input id="email" name="email" type="email" placeholder="voce@exemplo.com" autocomplete="email" required></p>
@@ -44,6 +44,8 @@
     <p><a href="index.html#contato">Contato</a> · <a href="cadastro.html">Criar conta</a></p>
     <p><small>Loja fictícia. © 2026 Pixel Arena.</small></p>
   </footer>
+  <script type="module" src="js/auth.js"></script>
+  <script type="module" src="js/ui.js"></script>
 </body>
 </html>
 
